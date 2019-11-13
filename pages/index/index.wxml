@@ -1,0 +1,42 @@
+<!-- 搜索框 -->
+<view class="search">
+  <view class="search_in">
+    <icon type="search" color="#b2b2b2" size="16"></icon>搜索</view>
+</view>
+
+<!-- 轮播图 -->
+<view class="sliter">
+  <swiper autoplay indicator-dots indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="#fff" circular>
+    <swiper-item wx:for="{{imgs}}" wx:key="id">
+      <image src="{{item.image_src}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 分类导航 -->
+<view class="category">
+  <block wx:for="{{category}}" wx:for-item="item2" wx:key="name">
+    <image class="categoryItem" src="{{item2.image_src}}"></image>
+  </block>
+</view>
+
+<!-- 首页楼层 -->
+<block wx:for="{{floorData}}" wx:key="">
+  <!-- 标题 -->
+  <view class="floor-title">
+    <image src="{{item.floor_title.image_src}}"></image>
+  </view>
+  <!-- 商品列表 -->
+  <view  class="floor-body">
+    <block wx:for="{{item.product_list}}" wx:for-item="item2" wx:key="name">
+      <view class="floor-body-item">
+        <image src="{{item2.image_src}}"></image>
+      </view>
+    </block>
+  </view>
+</block>
+
+<!-- 返回顶部按钮 -->
+<view class="toTop" bindtap="goToTop" data-scroll="{{ 0 }}" data-duration="{{300}}">
+顶部
+</view>

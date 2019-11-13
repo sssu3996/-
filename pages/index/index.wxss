@@ -1,0 +1,79 @@
+/* 搜索框 */
+
+.search {
+  width: 100%rpx;
+  height: 70rpx;
+  background-color: rgb(255, 45, 74);
+  padding: 10rpx 20rpx;
+}
+
+.search_in {
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  color: #999;
+  font-size: 13px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* 分类 */
+
+.category {
+  display: flex;
+  justify-content: space-around;
+}
+
+.categoryItem {
+  width: 128rpx;
+  height: 140rpx;
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+/* 首页楼层 */
+
+.floor-title {
+  clear: both;
+  height: 60rpx;
+  background-color: rgb(245, 245, 245);
+  padding: 20rpx 0;
+}
+
+.floor-title image {
+  width: 100%;
+  height: 100%;
+}
+
+.floor-body-item {
+  float: left;
+  width: 232rpx;
+  height: 188rpx;
+  margin: 10rpx;
+}
+
+.floor-body-item:nth-child(1) {
+  height: 386rpx;
+  width: 232rpx;
+}
+
+.floor-body-item image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 返回顶部 */
+.toTop{
+  position: fixed;
+  bottom: 5rpx;
+  right: 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  background-color: rgba(245, 245, 245,0.5);
+}

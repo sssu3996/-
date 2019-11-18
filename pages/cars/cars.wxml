@@ -1,2 +1,70 @@
 <!--pages/cars/cars.wxml-->
-<text>pages/cars/cars.wxml</text>
+<!-- 购物车页面 -->
+<!-- 用户信息 -->
+<view class="userAddress" bindtap="getAddress" >
+  <view class="addAddress" wx:if="{{!address.userName}}">
+    <view class="addAddressBtn">+添加收货地址</view>
+  </view>
+
+  <view class="userInfo" wx:else>
+    <!-- 收件人 -->
+    <view class="receiver">
+      收货人：{{address.userName}} {{address.telNumber}}
+    </view>
+    <!-- 收获地址 -->
+    <view class="address">
+      收获地址： {{address.addressDetail}}
+    </view>
+  </view>
+</view>
+
+
+<!-- 购物车为空的情况 -->
+<view wx:if="{{goodsArry.length === 0}}" class="empty-cart">
+  <image src="/images/empty_cart.svg" class="empty-cart-image"></image>
+  <navigator  class="empty-cart-btn" url="/pages/index/index" open-type="switchTab">去首页逛逛</navigator>
+</view>
+
+
+<!-- 购物车列表 -->
+<view class="carsList" wx:if="{{goodsArry.length !== 0}}">
+  <view class="shopName">优购生活馆</view>
+
+  <!-- 列表 -->
+  <view class="list" wx:for="{{goodsArry}}" wx:key="index">
+    <!-- 选择框 -->
+    <radio bindtap="selectGoods" data-index="{{index}}" color="#da5155" checked="{{item.goodsChecked }}" style="transform:scale(0.6);"></radio>
+    <!-- 商品图 -->
+    <image src="{{item.goods_small_logo}}"></image>
+
+    <view class="content">
+      <view class="content_title">{{item.goods_name}}</view>
+      <view class="content-price_num">
+        <view class="price">{{item.goods_price}}</view>
+        <view class="goodsNum">
+          <view class="reduce" bindtap="reduceNum" data-index="{{index}}" data-num="{{item.goods_count}}">-</view>
+          <view class="num">{{item.goods_count}}</view>
+          <view class="add" bindtap="addNum" data-addindex="{{index}}" data-addnum="{{item.goods_count}}">+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 空标签 -->
+<view class="null"></view>
+
+<!-- 结算栏目 -->
+<view class="calc">
+  <radio class="allSelect" bindtap="selectAll" color="#da5155" checked="{{ checkall }}" style="transform:scale(0.6);">全选</radio>
+  <view class="all">
+    <view class="all_top">
+      合计：
+      <view class="all_price">{{totalMoney}}</view>
+    </view>
+    <view class="all_bottom">包含运费</view>
+  </view>
+  <view class="pay" bindtap="goToPay">结算（
+    <block>{{totalCount}}</block>
+    ）</view>
+</view>

@@ -1,0 +1,53 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<!-- 商品详情页面 -->
+<!-- 商品轮播图 -->
+<view>
+  <swiper class="goods_sliter" autoplay indicator-dots indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="#fff" circular>
+    <swiper-item wx:for="{{goodsSliterImgs}}" wx:key="id">
+      <image src="{{item.pics_sma}}" mode="widthFix" bindtap="amplificationImg" data-url="{{item.pics_sma}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="content">
+  <!-- 价格 -->
+  <view class="price">￥{{goodsDetail.goods_price}}</view>
+
+  <!-- 标题 and 收藏-->
+  <view class="goods_title">
+    <view class="title">{{goodsDetail.goods_name}}</view>
+    <view class="star">
+      <image src="/images/star.svg"></image>
+      收藏</view>
+  </view>
+
+  <!-- 邮费 -->
+  <view class="postage">快递:免运费</view>
+</view>
+
+<!-- 促销 -->
+<view class="promotion">
+  <view class="promotion_title">促销</view>
+  <view class="promotion_content">满300减30</view>
+</view>
+
+<!-- 商品详情 -->
+<view class="detail">图文详情</view>
+<rich-text nodes="{{introduce}}"></rich-text>
+
+
+<!-- 空标签，底部遮挡部分 -->
+<view class="nullbox"></view>
+
+<!-- 底部栏 -->
+<view class="bottom">
+  <button class="kefu" open-type="contact" bindcontact="handleContact">
+    <image src="/images/icon-kefu.svg"></image>
+    联系客服</button>
+  <navigator class="car" url="/pages/cars/cars" open-type="switchTab">
+    <image src="/images/icon-car.svg"></image>
+    购物车
+  </navigator>
+  <view class="add" bindtap="addToCart">加入购物车</view>
+  <view class="buy">立即购买</view>
+</view>

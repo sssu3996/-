@@ -1,0 +1,26 @@
+<!--pages/goodsList/goodsList.wxml-->
+<!-- 商品列表页面 -->
+<!-- 搜索框 -->
+<search />
+
+<!-- 标题栏目 -->
+<view class="title ">
+  <view class="active">综合</view>
+  <view>销量</view>
+  <view>价格</view>
+</view>
+
+<!-- 商品详情 -->
+<navigator class="goodList" wx:for="{{goodslist}}" wx:key="goods_id" url="/pages/goodsDetail/goodsDetail?goods_id={{item.goods_id}}">
+
+  <!-- 左边 -->
+  <view class="img">
+    <image src="{{item.goods_big_logo || '/images/default.svg'}}"></image>
+  </view>
+
+  <!-- 右边 -->
+  <view class="content">
+    <view class="goodtitle">{{item.goods_name}}</view>
+    <view class="price">{{item.goods_price}}</view>
+  </view>
+</navigator>

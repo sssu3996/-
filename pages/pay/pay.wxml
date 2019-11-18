@@ -1,0 +1,57 @@
+<!--pages/pay/pay.wxml-->
+<!-- 订单付款页面 -->
+<!-- 用户信息 -->
+<view class="userAddress" bindtap="getAddress">
+  <view class="userInfo">
+    <!-- 收件人 -->
+    <view class="receiver">
+      收货人：{{addressArr.userName}} {{addressArr.telNumber}}
+    </view>
+    <!-- 收获地址 -->
+    <view class="address">
+      收获地址： {{addressArr.addressDetail}}
+    </view>
+  </view>
+</view>
+
+
+<!-- 购物车列表 -->
+<view class="carsList">
+  <view class="shopName">购物车</view>
+
+  <!-- 列表 -->
+  <view class="list" wx:for="{{payArry}}" wx:key="index">
+    <!-- 商品图 -->
+    <image src="{{item.goods_small_logo}}"></image>
+    <view class="content">
+      <view class="content_title">{{item.goods_name}}</view>
+      <view class="content-price_num">
+        <view class="price">{{item.goods_price}}</view>
+        <view class="goodsNum">
+          <view class="num">×{{item.goods_count}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 空标签 -->
+<view class="null"></view>
+
+<!-- 结算栏目 -->
+<view class="calc">
+  <view class="all">
+    <view class="all_top">
+      合计：
+      <view class="all_price">{{totalMoney}}</view>
+    </view>
+    <view class="all_bottom">包含运费</view>
+  </view>
+  <view class="barBtn">
+    <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getToken" wx:if="{{!token}}">请登录</button>
+    <view class="pay" bindtap="goToPay" wx:else bindtap="payForIt">支付（
+      <block>{{totalCount}}</block>
+      ）
+    </view>
+  </view>
+</view>

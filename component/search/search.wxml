@@ -1,0 +1,6 @@
+<!--component/search/search.wxml-->
+<!-- 搜索框组件的封装 -->
+<view class="search">
+  <view class="search_in">
+    <icon type="search" color="#b2b2b2" size="16"></icon>搜索</view>
+</view>

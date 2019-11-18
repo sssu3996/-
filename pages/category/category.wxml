@@ -1,2 +1,26 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<!-- 搜索框 -->
+<search />
+
+<!-- 导航栏 -->
+<view class="categoryNar">
+  <!-- 左 -->
+  <view class="categoryLeft">
+    <scroll-view class="category-left-item {{index === activeIndex ? 'active' : ''}}" wx:for="{{tabData}}" wx:key="index" data-index="{{index}}" bindtap="changeTab">{{item.cat_name}}</scroll-view>
+  </view>
+
+  <!-- 右 -->
+  <view class="categoryRight">
+    <scroll-view wx:for="{{leftData}}" wx:key="index">
+      <!-- 标题 -->
+      <view class="title">{{item.cat_name}}</view>
+      <!-- 内容 -->
+      <view class="content">
+        <navigator class="list-item" wx:for="{{item.children}}" wx:for-item="item2" wx:key="index1" url="/pages/goodsList/goodsList?cid={{item2.cat_id}}&query={{item2.cat_name}}">
+          <image src="{{item2.cat_icon}}"></image>
+          {{item2.cat_name}}
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+/* component/search/search.wxss */
+/* 搜索框 */
+.search {
+  width: 100%rpx;
+  height: 70rpx;
+  background-color: rgb(255, 45, 74);
+  padding: 10rpx 20rpx;
+}
+
+.search_in {
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  color: #999;
+  font-size: 13px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+}

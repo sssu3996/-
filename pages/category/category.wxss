@@ -1,1 +1,81 @@
 /* pages/category/category.wxss */
+
+/* 分类导航栏 */
+
+.categoryNar {
+  display: flex;
+}
+
+.categoryLeft {
+  width: 200rpx;
+  height: 100%;
+}
+
+.categoryRight {
+  width: calc(100vw - 200rpx);
+}
+
+.category-left-item {
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #eee;
+  text-align: center;
+  font-size: 14px;
+}
+
+.active {
+  background-color: #fff;
+  color: rgb(244, 43, 71);
+  font-weight: bold;
+  position: relative;
+}
+
+.active::before {
+  content: "";
+  width: 10rpx;
+  height: 60rpx;
+  background-color: #eb4450;
+  position: absolute;
+  left: 0;
+  top: 21rpx;
+}
+
+.title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 14px;
+}
+
+.title::before {
+  content: "/";
+  color: #ccc;
+  padding: 0 30rpx;
+}
+
+.title::after {
+  content: "/";
+  color: #ccc;
+  padding: 0 30rpx;
+}
+
+.list-item image {
+  width: 140rpx;
+  height: 90rpx;
+  background-color: #fff;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  width: 33.33%;
+  padding: 15rpx 0;
+  font-size: 12px;
+}
+
+.content {
+  height: cala(100% - 80rpx);
+}

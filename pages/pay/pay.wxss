@@ -1,16 +1,4 @@
-/* pages/cars/cars.wxss */
-.addAddressBtn{
-  margin: 20rpx auto;
-  width: 300rpx;
-  line-height: 80rpx;
-  height: 80rpx;
-  border: 1px solid #ccc;
-  text-align: center;
-  background-color: rgb(245, 245, 244);
-  font-size: 12px;
-}
-
-
+/* pages/pay/pay.wxss */
 .userInfo {
   padding: 30rpx;
   font-size: 12px;
@@ -70,18 +58,12 @@
 .goodsNum {
   width: 180rpx;
   display: flex;
-  justify-content: space-between;
+  color: #ccc;
+  justify-content: flex-end;
 }
 
-.reduce, .add {
-  width: 50rpx;
-  height: 50rpx;
-  text-align: center;
-  border: 1px solid black;
-}
 .null {
   height: 150rpx;
-
 }
 
 .calc {
@@ -90,19 +72,14 @@
   position: fixed;
   bottom: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   border-top: 20rpx solid rgb(245, 245, 244);
   background-color: #fff;
-}
-
-.allSelect {
-  font-size: 25px;
 }
 
 .all {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   width: 260rpx;
   font-size: 14px;
 }
@@ -134,25 +111,6 @@
   background-color: rgb(244, 43, 71);
   font-size: 13px;
   color: #fff;
-}
-.empty-cart{
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  position: fixed;
-  left:0;
-  top:0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.empty-cart-image{
-  width: 400rpx;
-  height: 400rpx;
-}
-.empty-cart-btn{
-  border:1rpx solid #ddd;
-  padding: 30rpx;
-  border-radius: 100rpx;
+  height: 100rpx;
+
 }

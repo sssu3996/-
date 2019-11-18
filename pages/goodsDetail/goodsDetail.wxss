@@ -1,0 +1,122 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+
+.goods_sliter image{
+  width: 100%;
+  height: 730rpx;
+}
+
+.goods_sliter image {
+  height: 100%;
+}
+
+.content {
+  border-bottom: 10px solid rgb(245, 245, 245);
+}
+
+.price {
+  padding: 20rpx;
+  color: rgb(244, 43, 71);
+}
+
+.goods_title {
+  display: flex;
+  padding: 20rpx;
+}
+
+.title {
+  width: 560rpx;
+  padding-right: 20rpx;
+  font-size: 13px;
+}
+
+.star {
+  width: calc(100vw - 600rpx);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  border-left: 1px solid #eee;
+  font-size: 12px;
+}
+
+.star image, .kefu image, .car image {
+  width: 22px;
+  height: 22px;
+}
+
+.postage {
+  font-size: 12px;
+  color: #ccc;
+  padding: 20rpx;
+}
+
+.promotion {
+  display: flex;
+  font-size: 13px;
+  padding: 20rpx;
+  border-bottom: 10px solid rgb(245, 245, 245);
+}
+
+.promotion_content {
+  color: rgb(244, 43, 71);
+  padding-left: 20rpx;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  float: left;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #ccc;
+  text-align: center;
+  background-color: #fff;
+}
+
+.kefu{
+  box-sizing: border-box;
+  padding: 0  22rpx; 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+
+}
+
+.car {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160rpx;
+  height: 120rpx;
+}
+
+.add, .buy {
+  width: 220rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  background-color: orange;
+  color: #fff;
+}
+
+.buy {
+  background-color: rgb(244, 43, 71);
+}
+
+.nullbox {
+  height: 140rpx;
+}
+
+.detail {
+  font-size: 14px;
+  padding: 20rpx;
+  font-weight: bold;
+  color: rgb(244, 43, 71);
+   border-bottom: 1px solid rgb(245, 245, 245);
+}
